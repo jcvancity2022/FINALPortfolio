@@ -1,0 +1,309 @@
+/* Colour Scheme */
+:root {
+    --primary-color: #0011ff; /* A modern and vibrant primary color */
+    --secondary-color: #FFFFFF; /* Secondary color for contrast */
+    --accent-color: #71bfff; /* An accent color that stands out */
+    --text-color: #333333; /* Dark color for readable text */
+    --background-light: #F7F7F7; /* Light background for certain sections */
+}
+
+.navigation {
+	display: flex;
+	justify-content: center;
+
+	margin-top: 3rem;
+
+	position: relative;
+	top: 20px;
+	bottom: 20px;
+}
+
+body {
+    background-color:rgb(53, 105, 195);
+}
+
+/* Typography */
+body, button, input, textarea {
+    font-family: 'Radio Canada', 'Arial', sans-serif; /* Clean, sans-serif font */
+    color: var(#0051ff);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Radio Canada', sans-serif; /* Serif font for headings to add character */
+    color: var(--primary-color);
+}
+
+/* Layout & Design */
+header {
+    background-color: #0051ff;
+    color: #0051ff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+#logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#nav-links {
+    list-style-type: none;
+}
+
+#nav-links li {
+    display: inline;
+    margin-right: 2rem;
+}
+
+#nav-links li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#nav-links li a:hover {
+    color: var(--accent-color);
+}
+
+#theme-switcher {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#theme-switcher:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+footer {
+	padding: 1em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1em;
+	
+	background-color: rgb(242, 242, 242);
+}
+footer > #contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1em 3em;
+}
+footer > #contact > div {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+}
+footer > #contact > div > img {
+	width: 2em;
+}
+footer > #contact > div > h4 {
+	margin: 0;
+}
+footer > #meta {
+	flex-shrink: 0;
+	display: flex;
+	gap: 1em;
+}
+
+button {
+    font-size: 1.5rem;
+    font-family: 'Radio Canada', sans-serif;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 0.5rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5ca0d3;
+    color:#FFFFFF;
+}
+
+img a:hover a:focus{
+    opacity: 0.8;
+}
+
+p {
+    max-width:60%;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: var(--background-light);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    #nav-links li {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Dark mode styles */
+.dark-mode {
+    --primary-color: #FFFFFF; /* Invert primary color */
+    --secondary-color: #5B62BE; /* Invert secondary color */
+    --text-color: #F7F7F7; /* Light text for dark background */
+    --background-light: #333333; /* Dark background for sections */
+}
+
+.dark-mode header {
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
+
+.dark-mode #nav-links li a {
+    color: var(--text-color);
+}
+
+.dark-mode #theme-switcher {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.dark-mode footer {
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
+
+/*responsive design*/
+@media (max-width: 1068px) {
+    /* Adjust the layout for smaller screens */
+    .project {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .project-image {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  
+    .project-info {
+      width: 100%; /* Allows the text to fill the container on smaller screens */
+    }
+  
+    .process {
+      width: auto; /* Allows the button to fit the content on smaller screens */
+      padding: 10px;
+    }
+  
+    .product-listing-container {
+        display: block;
+    }
+  
+    .checkout-container {
+        display: block;
+    }
+  
+    /* ... [additional responsive styles as needed] ... */
+}
+  
+footer > #footer-nav {
+	flex-shrink: 0;
+	display: flex;
+	gap: 1em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.column {
+    flex: 25%;
+    max-width: 100%;
+    padding: 0 0.2rem;
+}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+#layouts{
+    width:80%;
+}
+
+
+#home{
+    h4{
+        color:red;
+    }
+}
+
+.greyer {
+    perspective: 100px;
+	background-color: rgb(0, 217, 255);
+	padding: 0.01%;
+}
+
+.background {
+    color:rgb(0, 23, 67);
+	width: 100%;
+	height: 100vh;
+}
+.background > img {
+	border-radius: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.background > h1 {
+	color: white;
+
+	padding: 1em;
+	margin: 0;
+
+	position: absolute;
+}
+
+.navigation {
+	display: flex;
+	justify-content: center;
+
+	margin-top: -35px;
+
+	position: sticky;
+	top: 20px;
+	bottom: 20px;
+}
